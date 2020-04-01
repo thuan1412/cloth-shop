@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cloth-shop/static/css/main.941e95e4.chunk.css",
-    "main.js": "/cloth-shop/static/js/main.d949b235.chunk.js",
-    "main.js.map": "/cloth-shop/static/js/main.d949b235.chunk.js.map",
+    "main.js": "/cloth-shop/static/js/main.b6a66278.chunk.js",
+    "main.js.map": "/cloth-shop/static/js/main.b6a66278.chunk.js.map",
     "runtime-main.js": "/cloth-shop/static/js/runtime-main.6e2e3a6a.js",
     "runtime-main.js.map": "/cloth-shop/static/js/runtime-main.6e2e3a6a.js.map",
     "static/js/2.f59a88c0.chunk.js": "/cloth-shop/static/js/2.f59a88c0.chunk.js",
     "static/js/2.f59a88c0.chunk.js.map": "/cloth-shop/static/js/2.f59a88c0.chunk.js.map",
     "index.html": "/cloth-shop/index.html",
-    "precache-manifest.0dfbf6c632b50bed2625ee0828579414.js": "/cloth-shop/precache-manifest.0dfbf6c632b50bed2625ee0828579414.js",
+    "precache-manifest.be50ec5b3019e8aef4f08c1de0814e99.js": "/cloth-shop/precache-manifest.be50ec5b3019e8aef4f08c1de0814e99.js",
     "service-worker.js": "/cloth-shop/service-worker.js",
     "static/css/main.941e95e4.chunk.css.map": "/cloth-shop/static/css/main.941e95e4.chunk.css.map",
     "static/js/2.f59a88c0.chunk.js.LICENSE.txt": "/cloth-shop/static/js/2.f59a88c0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6e2e3a6a.js",
     "static/js/2.f59a88c0.chunk.js",
     "static/css/main.941e95e4.chunk.css",
-    "static/js/main.d949b235.chunk.js"
+    "static/js/main.b6a66278.chunk.js"
   ]
 }
