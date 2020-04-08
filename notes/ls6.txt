@@ -1,0 +1,75 @@
+- header.component.jsx
+	- functional component.
+		div (class='header')
+			<Link to='/' />
+				Logo className='logo'
+			div class='options'
+				Link to=shop class='option'
+					Shop
+				Link to=contact class='option'
+					Contact
+					
+- mkdir assets
+
+- import  ReactComponent as Lolo from 	'svg';
+
+- add to app.js, before switch tag
+- let styling: 
+- in app.css -> a {text-decoration: none}
+
+*** FORM INPUT ***
+- create sign-in-and-sign-up page
+	sign-in-and-sign-up.jsx
+	sign-in-and-sign-up.scss
+
+const SignInAndSignUpPage =
+	div(class='sign-in-and-sign-up'> 	
+
+- add to app.js, inside switchs
+
+- create sign-in component
+	- sign-in.component.jsx
+	- sign-in.styles.scss
+	- class Component
+		- state: {email='', password=''}
+		- handleSubmit = event => {
+			event.preventDefault();
+			set state to empty		
+		}
+
+		- handleChange = event => {
+			// add to input tag
+		}
+		- div(class='sign-in')
+			h2 I already have an account
+			span Sign in with your email and password
+			form onSubmit = handleSubmit
+				label Email
+				input(name='email' value='this.state.email, required 
+				** same with password **
+				input(name='submit' value='Submit')
+	- import to sign-in page
+
+*** STYLE THE FORM ***
+create form-input component
+functional component FormInput = ({handleChange, label, ...otherProps})
+	div(class='group')
+		input(class='form-input' onChange=... ...otherProps)
+		{
+			label ? 
+			(<label class='${props.value.length} ? shink : ''} form-input-label  >) {label}
+			: null		
+		}
+
+- add form-input into sign-in component
+
+
+***STYLE BUTTON***
+- crate custom-button component({children, ...otherProps})
+- functiona CustomButton component
+	- CustomButton
+		button
+			{children}
+	- add style
+- add to sign-in component
+

@@ -1,0 +1,156 @@
+- head to console
+- add project
+	create crown-db  project
+	- develop	
+		-authentication
+		-  
+		
+	- register app: crown-db
+	- npm install firebase
+	- config firebase
+
+*** SIGN IN AUTHETICATION ***
+- create firebase dir inside src
+	firebase.utils.js
+
+	import firebase from 'firebase/app';
+	import 'firebase/firestore';
+	import 'firebase/auth';
+
+	const config = ....
+	
+	firebase.initializeApp(config);
+
+	export const auth = firebase.auth();
+	export const  firesotre = firebase.firestore();
+	
+	const provider = new firebase.auth.GGauthProvider();
+	provider.setCustomParameter({prompt..})
+	export const signnInWithGG = () => auth.signINWithPopUp(provider);
+ 	
+	export defautl firebase;
+
+
+	// enable sign gg account in firebase authen develop
+	
+
+	-> head to sigin- component
+	impor signinWith GG
+	add button	onClick=SignInWithGoogle with onClick
+
+**** Sign-in ****
+- in app.js iport auth from firebase.utils
+- change App to Class
+- this.state.currentUser = null;
+- fetch data in componentDidMount() { 
+	// fetch data
+	auth.onAuthStateChanged(user => {
+		this.setState({currentUser: user});
+		console.log(user);
+- add unsubcribeFromAuth = null; set it = auth.onAiuthen..
+- in componentWillUnmount() {
+	this.unsubcribeFromAuth();
+}
+	
+	}
+}
+
+
+*** add signout button ***
+
+- add currentUser in Header
+- add {auth} in firebase utils
+- { currentUser ? : <div class='option' onClick={() => auth.signout} ... : <Link class='option' to SignIn></Link>}
+
+- add styling in signInWithGoogle button, add isGGSigin props to CustomButton
+- conditional add 'google-sign-in' class tp button tag
+- in styles, &.ggsign-in {background-color: $4295f4, color: white, &:hover: background-color: #4285f4 border: none }
+
+- wrap custom button to buttons class: display flex, justify-content
+
+
+**** FIRESTORE *****
+test.js
+
+import firebase firestore
+
+consts firestore = firebase.firestore()
+
+firestore.collection('users').doc(id).collections('cartItems').doc(id)
+		|| 			||
+firestore.doc('/users/id/cartItems/id);
+firestore.collection('/users/id/cartItems);
+
+
+*** Storing User Data ***
+export cosnt createUserProfileDocument = async (userAuth, additionalData) => 
+{
+if (!userAuth) return; 
+
+const userRef = firestore.doc(`user/${userAuth.uid}
+const snapShot = userRef.get();
+if !snapShot.exits() { displayname, email} = userAuth;
+			const createAt = new Date();
+try {
+	await userRef.set({....., ...aditionalData})
+} catch (error) {
+	log('error');
+}
+
+}
+
+
+pass createUserProfileDocument to App.js
+-> replace setState to createUserProfileDocument(user);
+
+*** STORE IN OUR APPP *******
+IN componentDidMount
+const userRef = createUserProfile...(userAuth);
+userRef.onSnapShot(snapShot => {
+	// snapshot.data has email, name, createAt
+	// snapshot.id
+	this.setState({
+		currentUser: {
+			id: snapShot.id,
+			...snapShot.data()		
+		}		
+	})
+}) //onObjectChange
+
+
+
+
+**** SIGN UP *****
+sign-up component
+import form input, customButton
+import auth, createUserProfileDocument
+
+class Sign
+	handleSubmit = async event => {
+		event.preventDefault
+		check password
+
+		try {
+			const {user} = await auth.creaetUserWIthemail
+		}
+		await createUserProfileDocument(user, {displayName});
+		this.setState{''}
+	}
+
+	handleChange() {
+		....	
+	}
+	this.state = {displayName, email, password, confirmPassword = '');
+	render div class='sign-up'
+		h2 class='title'
+		spane Sign Up with Your Email
+		form class='sign-up-form', onSubmit=handleSubmit
+			formInput text, displayName, value={displayName} onChange=handleChange, label='Display Name'
+			// Same to the rest
+			CustomButton type='submit' SIGN UP
+
+remember to export
+
+**** ADD SIGN UP TO SIGN IN AND SIGN UP PAGES ****
+
+
