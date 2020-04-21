@@ -1,0 +1,27 @@
+FLOW:
+  ACTION --> MIDDLEWARE -> ROOT REDUCER -> STORE -> DOM Changes
+                ||
+             redux-logger
+  
+- add Provider to index.js and wrap the app inside Provider component to give the app get access to the store
+- create `redex` dir
+  - rot-reducer.js represent all state of our app 
+  - mkdir user: store user 
+    - user.reducer.js
+
+      const userReducer = (state, action) => {}
+    - combine reducer in root-reducer
+
+==== SET UP 2 =====
+
+mkdir store inside redux
+  need createStore, applyMiddleware from redux
+  logger from redux-logger
+
+  import rootReducer
+  
+  creae middlewares array = [logger]
+
+  store = createStore(rootReducer, ...middlewares)
+
+  - Create user.action.js

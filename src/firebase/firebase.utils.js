@@ -39,6 +39,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 };
 
 export const auth = firebase.auth();
+
+export const signInWithEmailAndPassword = auth.signInWithEmailAndPassword;
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
